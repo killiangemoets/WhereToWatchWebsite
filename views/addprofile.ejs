@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Summary that will appear on google, etc. -->
+    <meta
+      name="description"
+      content="WhereToWatch is an application that tells you on which platform you can stream or buy a show, depending on the country you are in."
+    />
+
+    <!-- Always include this line of code for responsive website -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="stylesheet" href="stylesheets/queries.css" />
+
+    <script defer type="module" src="javascripts/addProfile.js"></script>
+    <!-- script for the icons -->
+    <script
+      src="https://kit.fontawesome.com/4901497cb9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+
+    <title>
+      WhereToWatch &mdash; Find a platform to watch your favorite show
+    </title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header-section">
+        <div class="logo-box">WhereToWatch</div>
+      </header>
+
+      <main>
+        <div class="grid--1col">
+          <div class="container-users">
+            <section class="main-title-section">
+              <h1 class="main-title--edit-section">Add a new profile</h1>
+            </section>
+            <section class="form-section">
+              <form id="edit-user-form" class="edit-user-form">
+                <div>
+                  <label for="username">Username:</label>
+
+                  <input
+                    id="new-username"
+                    type="text"
+                    placeholder="Username"
+                    name="username"
+                    required
+                  />
+                  <p class="profile-error-message" id="new-username-error"></p>
+                </div>
+
+                <div>
+                  <label for="select-icon">User icon:</label>
+
+                  <select id="new-icon" name="select-icon" required>
+                    <option value="">Pleace choose an icon:</option>
+                    <option value="user">User</option>
+                    <option value="person-biking">Biker</option>
+                    <option value="person-hiking">Hiker</option>
+                    <option value="person-skiing">Skier</option>
+                    <option value="person-snowboarding">Snowboarder</option>
+                    <option value="user-ninja">Ninja</option>
+                    <option value="user-astronaut">Astronaut</option>
+                    <option value="peace">Peace</option>
+                    <option value="football">Football</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="futbol">Soccer</option>
+                  </select>
+                  <p class="profile-error-message" id="new-icon-error"></p>
+                </div>
+
+                <div>
+                  <label for="select-color">Icon color:</label>
+
+                  <select id="new-color" name="select-color" required>
+                    <option value="">Pleace choose a color:</option>
+                    <option value="red">Red</option>
+                    <option value="orange">Orange</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="pink">Pink</option>
+                    <option value="purple">Purple</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                  </select>
+                  <p class="profile-error-message" id="new-color-error"></p>
+                </div>
+
+                <div>
+                  <label for="select-background">Background color:</label>
+
+                  <select id="new-background" name="select-background" required>
+                    <option value="">Pleace choose a background color:</option>
+                    <option value="bgRed">Red</option>
+                    <option value="bgOrange">Orange</option>
+                    <option value="bgYellow">Yellow</option>
+                    <option value="bgPink">Pink</option>
+                    <option value="bgPurple">Purple</option>
+                    <option value="bgGreen">Green</option>
+                    <option value="bgBlue">Blue</option>
+                    <option value="bgWhite">White</option>
+                    <option value="bgBlack">Black</option>
+                  </select>
+                  <p
+                    class="profile-error-message"
+                    id="new-background-error"
+                  ></p>
+                </div>
+              </form>
+              <button class="btn--user btn--user-overview">
+                <div class="user-picture">
+                  <div class="user-picture-sub">
+                    <i class="fa-solid fa-user"></i>
+                  </div>
+                </div>
+                <p class="user-name">Username</p>
+              </button>
+            </section>
+            <section class="buttons-edit-profile-section">
+              <button id="btn--confirm-add" class="btn btn-form--submit">
+                Confirm
+              </button>
+              <a href="/"
+                ><button class="btn btn-form--cancel">Cancel</button></a
+              >
+            </section>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="copyright">
+          <p>© Copyright by Killian Gemoets.</p>
+        </div>
+        <p class="TMDB">
+          This product uses the TMDB API but is not endorsed or certified by
+          TMDB.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

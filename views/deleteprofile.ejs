@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Summary that will appear on google, etc. -->
+    <meta
+      name="description"
+      content="WhereToWatch is an application that tells you on which platform you can stream or buy a show, depending on the country you are in."
+    />
+
+    <!-- Always include this line of code for responsive website -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+    <link rel="stylesheet" href="../stylesheets/queries.css" />
+
+    <script defer type="module" src="script.js"></script>
+    <!-- script for the icons -->
+    <script
+      src="https://kit.fontawesome.com/4901497cb9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+
+    <title>
+      WhereToWatch &mdash; Find a platform to watch your favorite show
+    </title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header-section">
+        <div class="logo-box">WhereToWatch</div>
+      </header>
+
+      <main>
+        <div class="grid--1col">
+          <div class="container-users">
+            <section class="main-title-section">
+              <h1 class="main-title--delete-last-call">
+                Are you sure you want to delete this profile?
+              </h1>
+            </section>
+
+            <section class="buttons--yes-or-no">
+              <a href="/confirm-delete/<%= username %>"><button
+                id="btn--delete-profile"
+                class="btn btn--yes"
+              >
+                Yes
+              </button>
+            </a>
+              <a href="/edit-profile/<%= username %>"><button class="btn btn--no">No</button>
+            </section></a>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="copyright">
+          <p>© Copyright by Killian Gemoets.</p>
+        </div>
+        <p class="TMDB">
+          This product uses the TMDB API but is not endorsed or certified by
+          TMDB.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

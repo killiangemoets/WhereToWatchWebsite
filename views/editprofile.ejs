@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Summary that will appear on google, etc. -->
+    <meta
+      name="description"
+      content="WhereToWatch is an application that tells you on which platform you can stream or buy a show, depending on the country you are in."
+    />
+
+    <!-- Always include this line of code for responsive website -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+    <link rel="stylesheet" href="../stylesheets/queries.css" />
+
+
+    <script defer type="module" src="../javascripts/editProfile.js"></script>
+    <!-- script for the icons -->
+    <script
+      src="https://kit.fontawesome.com/4901497cb9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+
+    <title>
+      WhereToWatch &mdash; Find a platform to watch your favorite show
+    </title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header-section">
+        <div class="logo-box">WhereToWatch</div>
+      </header>
+
+      <main>
+        <div class="grid--1col">
+          <div class="container-users">
+            <section class="main-title-section">
+              <h1 class="main-title--edit-section">Edit a profile</h1>
+            </section>
+            <section class="form-section">
+              <form id="edit-user-form" class="edit-user-form" action="POST">
+                <div>
+                  <label for="username">Username:</label>
+                  <input
+                    id="username"
+                    type="text"
+                    placeholder="<%=
+                  user.username %>"
+                    name="username"
+                    required
+                    data-username="<%= user.username %>"
+                  />
+                </div>
+                <div>
+                  <label for="select-icon">User icon:</label>
+                  <select
+                    id="select-icon"
+                    data-icon="<%= user.icon %>"
+                    name="select-icon"
+                    required
+                  >
+                  <option value="">Pleace choose an icon:</option>
+                  <option value="user">User</option>
+                  <option value="person-biking">Biker</option>
+                  <option value="person-hiking">Hiker</option>
+                  <option value="person-skiing">Skier</option>
+                  <option value="person-snowboarding">Snowboarder</option>
+                  <option value="user-ninja">Ninja</option>
+                  <option value="user-astronaut">Astronaut</option>
+                  <option value="peace">Peace</option>
+                  <option value="football">Football</option>
+                  <option value="basketball">Basketball</option>
+                  <option value="futbol">Soccer</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="select-color">Icon color:</label>
+                  <select
+                    id="select-color"
+                    data-color="<%= user.color %>"
+                    name="select-color"
+                    required
+                  >
+                  <option value="">Pleace choose a color:</option>
+                  <option value="red">Red</option>
+                  <option value="orange">Orange</option>
+                  <option value="yellow">Yellow</option>
+                  <option value="pink">Pink</option>
+                  <option value="purple">Purple</option>
+                  <option value="green">Green</option>
+                  <option value="blue">Blue</option>
+                  <option value="white">White</option>
+                  <option value="black">Black</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="select-background">Background color:</label>
+                  <select
+                    id="select-background"
+                    data-background="<%= user.backgroundColor %>"
+                    name="select-background"
+                    required
+                  >
+                  <option value="">Pleace choose a background color:</option>
+                  <option value="bgRed">Red</option>
+                  <option value="bgOrange">Orange</option>
+                  <option value="bgYellow">Yellow</option>
+                  <option value="bgPink">Pink</option>
+                  <option value="bgPurple">Purple</option>
+                  <option value="bgGreen">Green</option>
+                  <option value="bgBlue">Blue</option>
+                  <option value="bgWhite">White</option>
+                  <option value="bgBlack">Black</option>
+                  </select>
+                </div>
+              </form>
+              <button class="btn--user btn--user-overview">
+                <div class="user-picture <%= user.backgroundColor %>">
+                  <div class="user-picture-sub <%= user.color %>">
+                    <i class="fa-solid fa-<%= user.icon %>"></i>
+                  </div>
+                </div>
+                <p class="user-name"><%= user.username %></p>
+              </button>
+            </section>
+            <p class="profile-error-message"></p>
+            <section class="buttons-edit-profile-section btns-edit">
+              <button
+                id="btn--confirm-edit"
+                class="btn btn-form--submit "
+              >
+                Confirm
+              </button>
+              <a href="/"><button class="btn btn-form--cancel">Cancel</button></a>
+              <a href="/delete-profile/<%= user.username %>" class="delete-link"><button class="btn btn-form--delete">Delete Profile</button>
+            </section></a>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="copyright">
+          <p>© Copyright by Killian Gemoets.</p>
+        </div>
+        <p class="TMDB">
+          This product uses the TMDB API but is not endorsed or certified by
+          TMDB.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

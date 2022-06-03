@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Summary that will appear on google, etc. -->
+    <meta
+      name="description"
+      content="WhereToWatch is an application that tells you on which platform you can stream or buy a show, depending on the country you are in."
+    />
+
+    <!-- Always include this line of code for responsive website -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="stylesheet" href="stylesheets/queries.css" />
+
+    <script defer type="module" src="javascripts/controller.js"></script>
+
+    <!-- script for the icons -->
+    <script
+      src="https://kit.fontawesome.com/4901497cb9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+
+    <title>
+      WhereToWatch &mdash; Find a platform to watch your favorite show
+    </title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header-section">
+        <div class="logo-box">WhereToWatch</div>
+        <div class="profile">
+          <button class="btn btn--mylist">
+            My List <i class="fa-solid fa-caret-down"></i>
+          </button>
+          <button
+            onclick=""
+            class="btn btn--profile btn--logout <%= backgroundColor %> <%= color %>"
+            data-icon="<%= icon %>"
+          >
+            <i class="fa-solid fa-<%= icon %>"></i>
+          </button>
+        </div>
+      </header>
+
+      <section
+        class="results-section"
+        data-search="<%= search %>"
+        data-page="<%= page %>"
+      >
+        <div class="form">
+          <form class="search-form">
+            <div class="shadow-div">
+              <input
+                id="search-show"
+                type="text"
+                placeholder="Search for a show"
+                name="show"
+                class="search-show"
+              />
+              <button class="btn btn--form">
+                <i class="fa-solid fa-magnifying-glass"></i> Search
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="results-div">
+          <ul class="results">
+            <!-- <li class="show-card">
+            <div class="results-img-box">
+              <img
+                class="results-img"
+                src="img/friends2.jpg"
+                alt="Omnifood logo"
+              />
+            </div>
+            <div class="results-info">
+              <div class="results-info-box">
+                <h3 class="results-title">Friends from College</h3>
+                <p class="results-categories">Comedy, Drame</p>
+                <p class="results-year">2018</p>
+              </div>
+            </div>
+          </li>
+          <li class="show-card show-active">
+            <div class="results-img-box">
+              <img
+                class="results-img"
+                src="img/friends.jpg"
+                alt="Omnifood logo"
+              />
+            </div>
+            <div class="results-info">
+              <div class="results-info-box">
+                <h3 class="results-title">Friends</h3>
+                <p class="results-categories">Comedy, Drame</p>
+                <p class="results-year">1994</p>
+              </div>
+            </div>
+          </li> -->
+          </ul>
+        </div>
+        <div class="change-page">
+          <!-- <button class="btn btn--prev">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button class="btn btn--next">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <p class="num-pages">Page 2 of 4</p> -->
+        </div>
+        <div class="copyright">
+          <p>© Made by Killian Gemoets</p>
+          <p>
+            This product uses the TMDB API but is not endorsed or certified by
+            TMDB
+          </p>
+        </div>
+      </section>
+
+      <section class="mylist-section hidden">
+        <ul
+          class="myList"
+          data-list="<%= list %>"
+          data-username="<%= username %>"
+        ></ul>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,305 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/**************************/
+/******* BELOW 1400px ******/
+/**************************/
+@media (max-width: 87.5em) {
+  .results {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/**************************/
+/******* BELOW 1120px ******/
+/**************************/
+@media (max-width: 70em) {
+  .users-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 12rem;
+  }
+}
+
+/**************************/
+/******* BELOW 1040px ******/
+/**************************/
+@media (max-width: 65em) {
+  .results {
+    grid-template-columns: 1fr 1fr;
+  }
+  .show-section-box {
+    width: 80%;
+  }
+}
+
+/**************************/
+/******* BELOW 816px ******/
+/**************************/
+@media (max-width: 51em) {
+  .show-section-box {
+    width: 85%;
+  }
+}
+
+/**************************/
+/******* BELOW 752px ******/
+/**************************/
+@media (max-width: 47em) {
+  .stream-logos,
+  .buy-logos {
+    grid-template-columns: auto auto auto auto;
+    margin-left: 0rem;
+  }
+  .show-presentation {
+    grid-template-columns: auto;
+    align-items: center;
+    gap: 2.4rem;
+  }
+
+  .show-img-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .show-img {
+    width: 80%;
+  }
+}
+
+/**************************/
+/******* BELOW 688px ******/
+/**************************/
+@media (max-width: 43em) {
+  .results {
+    grid-template-columns: 1fr;
+  }
+}
+
+/**************************/
+/******* BELOW 656px ******/
+/**************************/
+@media (max-width: 41em) {
+  .stream-logos,
+  .buy-logos {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+/**************************/
+/******* BELOW 600px ******/
+/**************************/
+@media (max-width: 37.5em) {
+  .show-div {
+    padding-top: 4.8rem;
+  }
+  .form--return {
+    position: absolute;
+    top: -4.4%;
+    left: -5%;
+  }
+  .show-section-box {
+    width: 98%;
+    padding: 2.8rem;
+  }
+  .wheretowatch-title {
+    font-size: 1.6rem;
+  }
+
+  .show-title {
+    font-size: 1.6rem;
+  }
+  .show-title span {
+    font-size: 2.6rem;
+  }
+  .show-infos {
+    font-size: 1.6rem;
+  }
+  .show-overview-title {
+    font-size: 1.6rem;
+  }
+  .show-overview {
+    font-size: 1rem;
+  }
+  .btn--country {
+    padding: 0.6rem 1rem;
+    font-size: 1.4rem;
+  }
+  .flag-img {
+    height: 1.4rem;
+    width: 2rem;
+  }
+  .wheretowatch-subtitle {
+    font-size: 1.2rem;
+  }
+  .stream-logo,
+  .buy-logo,
+  .stream-logos div,
+  .buy-logos div {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 12px;
+  }
+}
+
+/**************************/
+/******* BELOW 560px ******/
+/**************************/
+@media (max-width: 35em) {
+  .users-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 8rem;
+  }
+
+  .edit-user-form div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0rem;
+  }
+
+  .form-section {
+    gap: 3.2rem;
+  }
+
+  .edit-user-form label {
+    margin-left: -8rem;
+  }
+  .buttons-edit-profile-section {
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .btn-form--submit {
+    padding: 0.8rem 6.4rem;
+  }
+
+  .profile-error-message {
+    margin-left: 12.8rem;
+    align-self: flex-start;
+  }
+}
+
+/**************************/
+/******* BELOW 528px ******/
+/**************************/
+@media (max-width: 33em) {
+  .btn--form {
+    font-size: 1.4rem;
+  }
+
+  .search-form input {
+    width: 20rem;
+    font-size: 1.4rem;
+  }
+
+  .header-section {
+    padding: 0 2rem;
+  }
+
+  .logo-box {
+    font-size: 1.6rem;
+  }
+  .btn--mylist {
+    padding: 0.8rem 2.4rem;
+    font-size: 1.4rem;
+  }
+  .btn--logout {
+    font-size: 1.4rem;
+    padding: 0.8rem 1.4rem;
+  }
+
+  .profile {
+    gap: 1.4rem;
+  }
+}
+
+/**************************/
+/******* BELOW 512px ******/
+/**************************/
+@media (max-width: 32em) {
+  .btns-edit {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .delete-link {
+    grid-column: 1/3;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .copyright p {
+    font-size: 0.8rem;
+  }
+}
+
+/**************************/
+/******* BELOW 416px ******/
+/**************************/
+@media (max-width: 26em) {
+  .search-form input {
+    width: 18rem;
+  }
+
+  .main-title--select-profile {
+    font-size: 4rem;
+  }
+
+  .main-title--edit-menu {
+    font-size: 3.2rem;
+  }
+
+  .main-title--edit-section {
+    font-size: 3.2rem;
+  }
+
+  .main-title--delete-last-call {
+    font-size: 2.6rem !important;
+  }
+
+  .user-picture {
+    padding: 2rem 0rem;
+    font-size: 6.4rem;
+  }
+  .buttons-section {
+    gap: 3.2rem;
+  }
+  .btn--user {
+    width: 11.4rem;
+  }
+  .user-name {
+    font-size: 1.6rem;
+  }
+  .btn--edit,
+  .btn--add {
+    padding: 1.2rem 1.8rem;
+    font-size: 1.6rem;
+  }
+  .edit-user-form label {
+    font-size: 1.4rem;
+  }
+  .edit-user-form input,
+  .edit-user-form select {
+    font-size: 1.2rem;
+    width: 50%;
+  }
+  .buttons-edit-profile-section {
+    gap: 1.6rem;
+    justify-content: center;
+  }
+
+  .btn-form--submit {
+    padding: 0.8rem 5rem;
+  }
+
+  .buttons--yes-or-no {
+    gap: 3.6rem;
+  }
+  .stream-logos,
+  .buy-logos {
+    grid-template-columns: auto auto;
+  }
+}

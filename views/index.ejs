@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Summary that will appear on google, etc. -->
+    <meta
+      name="description"
+      content="WhereToWatch is an application that tells you on which platform you can stream or buy a show, depending on the country you are in."
+    />
+
+    <!-- Always include this line of code for responsive website -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="stylesheet" href="stylesheets/queries.css" />
+
+
+    <script defer type="module" src="javascripts/index.js"></script>
+    <!-- script for the icons -->
+    <script
+      src="https://kit.fontawesome.com/4901497cb9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+
+    <title>
+      WhereToWatch &mdash; Find a platform to watch your favorite show
+    </title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header-section">
+        <div class="logo-box">WhereToWatch</div>
+      </header>
+
+      <main>
+        <div class="grid--1col">
+          <div class="container-users">
+            <section class="main-title-section">
+              <h1 class="main-title--select-profile">Who is there?</h1>
+            </section>
+            <section class="users-section">
+
+              <%
+              for(var i=0; i<users.length; i++){
+                %>
+
+                <a href="/login?username=<%= users[i].username %>">
+                <button
+                class="btn--user"
+              >
+                <div class="user-picture <%=users[i].color %> <%=users[i].backgroundColor %>">
+                  <i class="fa-solid fa-<%=users[i].icon %>"></i>
+                </div>
+                <p class="user-name"><%= users[i].username %></p>
+              </button>
+            </a>
+                <%
+              }
+                %>
+            </section>
+            <section class="buttons-section">
+              <a href="/edit"><button class="btn btn--edit">Edit a profile</button></a>
+              <button class="btn btn--add" data-num = "<%= users.length %>">Add a profile</button>
+            </section>
+            <p class="max-accounts"></p>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="copyright">
+          <p>© Copyright by Killian Gemoets.</p>
+        </div>
+        <p class="TMDB">
+          This product uses the TMDB API but is not endorsed or certified by
+          TMDB.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Summary that will appear on google, etc. -->
+    <meta
+      name="description"
+      content="WhereToWatch is an application that tells you on which platform you can stream or buy a show, depending on the country you are in."
+    />
+
+    <!-- Always include this line of code for responsive website -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../stylesheets/style.css" />
+    <link rel="stylesheet" href="../../../stylesheets/queries.css" />
+
+    <script
+      defer
+      type="module"
+      src="../../../javascripts/controller2.js"
+    ></script>
+
+    <!-- script for the icons -->
+    <script
+      src="https://kit.fontawesome.com/4901497cb9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+
+    <title>
+      WhereToWatch &mdash; Find a platform to watch your favorite show
+    </title>
+  </head>
+  <body>
+    <div class="container grid">
+      <header class="header-section">
+        <div class="logo-box">WhereToWatch</div>
+
+        <div class="profile">
+          <button class="btn btn--mylist">
+            My List <i class="fa-solid fa-caret-down"></i>
+          </button>
+          <button
+            onclick=""
+            class="btn btn--profile btn--logout <%= backgroundColor %> <%= color %>"
+            data-icon="<%= icon %>"
+          >
+            <i class="fa-solid fa-<%= icon %>"></i>
+          </button>
+        </div>
+      </header>
+
+      <section
+        class="show-section"
+        data-show-id="<%= id %>"
+        data-search="<%= search %>"
+        data-page="<%= page %>"
+      >
+        <div class="show-div">
+          <div class="show-section-box"></div>
+        </div>
+        <div class="copyright">
+          <p>© Made by Killian Gemoets</p>
+          <p>
+            This product uses the TMDB API but is not endorsed or certified by
+            TMDB
+          </p>
+        </div>
+      </section>
+
+      <section class="mylist-section hidden">
+        <ul
+          class="myList"
+          data-list="<%= list %>"
+          data-username="<%= username %>"
+        ></ul>
+      </section>
+    </div>
+  </body>
+</html>
