@@ -37,7 +37,6 @@ usernameInput.addEventListener("change", function () {
 
 confirmBtn.addEventListener("click", async function (e) {
   e.preventDefault();
-  //   console.log("click");
   errorUsername.innerHTML = "";
   errorIcon.innerHTML = "";
   errorColor.innerHTML = "";
@@ -65,8 +64,6 @@ confirmBtn.addEventListener("click", async function (e) {
     });
 
     const response = await databaseResponse.json();
-
-    console.log(response);
 
     if (response.status === "success") {
       // REDIRECT

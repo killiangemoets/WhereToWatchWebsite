@@ -52,7 +52,7 @@ export default class PreviewView extends View {
                 <img
                     class="results-img"
                     src="${
-                      show.poster.indexOf("not_available") === -1
+                      show.poster.indexOf("not-image") === -1
                         ? show.poster
                         : "../../../" + show.poster
                     }"

@@ -1,0 +1,228 @@
+/* -------------------------------------------------- */
+/*-------------------- SHOW---------------------------*/
+/* -------------------------------------------------- */
+.show-section {
+  margin-top: 8rem;
+
+  min-height: calc(100vh - 8rem);
+  background-color: #fff;
+  border-bottom-right-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  /* padding: 4.8rem 4rem 1.6rem 0rem; */
+  padding: 4.8rem 4rem 1.6rem 4rem;
+  gap: 6.4rem;
+}
+
+.show-div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form--return {
+  position: absolute;
+  top: 2%;
+  left: -12%;
+}
+
+.show-section-box {
+  background-color: #e8ecf7;
+  border-radius: 12px;
+  padding: 4.8rem;
+  width: 70%;
+  max-width: 84rem;
+  /* width: 80.6rem; */
+  /* height: 80rem; */
+  display: flex;
+  flex-direction: column;
+  gap: 6.4rem;
+  position: relative;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.08);
+}
+
+/* PRESENTATION */
+.show-presentation {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+  gap: 4.8rem;
+}
+
+.show-img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.show-content--flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.show-title {
+  line-height: 1.2;
+  color: #333;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 2.4rem;
+}
+
+.show-title span {
+  font-size: 3.6rem;
+}
+
+.btn--add-to-fav {
+  height: 4rem;
+  width: 4rem;
+  padding: 1rem;
+  font-size: 2.4rem;
+  border-radius: 1000px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.heart-active i {
+  color: #fc5c65;
+}
+
+.show-infos {
+  font-size: 2rem;
+  color: #444;
+  font-weight: 600;
+  margin-bottom: 2.4rem;
+}
+.show-infos span {
+  font-style: italic;
+}
+
+.show-overview-title {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  color: #444;
+  font-weight: 600;
+}
+
+.show-overview {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* WHERETOWATCH */
+.show-wheretowatch {
+  margin-left: 1.6rem;
+}
+
+.show-wheretowatch--flex {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.8rem;
+}
+.wheretowatch-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #444;
+}
+
+.btn--country {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.flag-img {
+  height: 2rem;
+  width: 3rem;
+}
+
+.stream {
+  margin-bottom: 2.8rem;
+}
+.stream,
+.buy {
+  margin-left: 3.2rem;
+}
+
+.wheretowatch-subtitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 2.2rem;
+}
+
+.stream-logos,
+.buy-logos {
+  margin-left: 3.2rem;
+  /* display: flex; */
+  display: grid;
+  align-items: start;
+  justify-content: start;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 2.4rem;
+  min-height: 5.8rem;
+}
+
+.stream-logo,
+.buy-logo,
+.stream-logos div,
+.buy-logos div {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 16px;
+}
+
+/* -------------------------------------------------- */
+/*--------------------COUNTRIES-----------------------*/
+/* -------------------------------------------------- */
+
+.countries-section {
+  background-color: #fff;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.08);
+  padding: 0.6rem;
+  border-radius: 9px;
+
+  position: absolute;
+  right: 0rem;
+  top: 4rem;
+}
+
+.countries-section-box {
+  background-color: #fff;
+  max-height: 18.6rem;
+  overflow-y: scroll;
+}
+
+.countries-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.countries-section ul li {
+  list-style-type: none;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  cursor: pointer;
+
+  padding: 0.8rem 1.72rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.flag-active {
+  background-color: #00a8ff;
+  color: white;
+}
+
+.flag-mouse {
+  transition: all 0.3s;
+  background-color: #cceeff;
+  color: #444;
+}

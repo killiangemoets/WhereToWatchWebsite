@@ -1,0 +1,108 @@
+/* -------------------------------------------------- */
+/*-------------------- SEARCH BAR --------------------*/
+/* -------------------------------------------------- */
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+  /* border-radius: 8px; */
+  /* border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px; */
+
+  transition: all 0.5s;
+}
+
+.search-form input {
+  width: 32rem;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.8rem;
+
+  border: none;
+  /* border-radius: 8px; */
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.search-form input::placeholder {
+  color: #999;
+}
+
+.search-form input:focus {
+  outline: none;
+}
+
+.btn--form {
+  /* transform: translateX(-2rem); */
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.shadow-div {
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0rem;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.08);
+}
+
+/* -------------------------------------------------- */
+/*-------------------- RESULTS------------------------*/
+/* -------------------------------------------------- */
+
+.results-section {
+  margin-top: 8rem;
+  min-height: calc(100vh - 8rem);
+  /* height: 88rem; */
+  width: 100%;
+  /* width: 35.4rem; */
+  background-color: #f5fcff;
+
+  border-bottom-left-radius: 12px;
+  padding: 4.8rem 4rem 1.6rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6.4rem;
+  position: relative;
+}
+
+.results-div {
+  min-height: 67.6rem;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.results {
+  display: grid;
+  /* align-items: center; */
+  /* justify-content: center; */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3.2rem;
+}
+
+.change-page {
+  margin: 2.4rem 3.2rem 0 3.2rem;
+  position: relative;
+}
+
+.btn--prev,
+.btn--next {
+  padding: 0.6rem 1.6rem;
+}
+.btn--prev {
+  position: absolute;
+  left: 0;
+}
+.btn--next {
+  position: absolute;
+  right: 0;
+}
+
+.num-pages {
+  margin-top: 3.2rem;
+  text-align: center;
+  font-size: 1.2rem;
+}

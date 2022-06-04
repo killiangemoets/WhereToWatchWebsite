@@ -73,7 +73,6 @@ const getMyListFromLocalStorage = function () {
   state.myList = myListElement.dataset?.list
     ? JSON.parse(myListElement.dataset.list)
     : [];
-  console.log(state.myList);
   state.username = myListElement.dataset.username;
 };
 
@@ -83,7 +82,7 @@ const createShowInfos = function (data) {
     title: data.name,
     poster: data.poster_path
       ? POSTER_PATH_START + data.poster_path
-      : "../../../img/not_available.png",
+      : "../../../img/no-image.PNG",
     numSeasons: data.number_of_seasons,
     genres: data.genres ? data.genres.map((obj) => obj.name) : "",
     year: data.first_air_date ? data.first_air_date.split("-")[0] : "",
@@ -103,7 +102,6 @@ export const loadShow = async function (id) {
     ]);
 
     state.showInfos = createShowInfos(dataShow);
-    console.log(state.showInfos);
     state.showProviders = dataProviders;
   } catch (err) {
     throw err;
@@ -128,7 +126,7 @@ export const loadResults = async function (query, pageAPI = 1) {
         title: show.original_name,
         poster: show.poster_path
           ? POSTER_PATH_START + show.poster_path
-          : "img/not_available.png",
+          : "img/no-image.PNG",
         year: show.first_air_date ? show.first_air_date.split("-")[0] : "",
         genres: show.genre_ids
           ? show.genre_ids.map(
@@ -172,8 +170,6 @@ export const getResultsPage = async function (page = state.currentPage) {
 };
 
 export const addToMyList = async function () {
-  console.log(state.showInfos.id);
-  console.log(state.myList[0]?.id);
   if (state.myList.find((show) => show.id == state.showInfos.id)) {
     // Remove the show from the list if it was already there
     state.myList = state.myList.filter((show) => show.id != state.showInfos.id);
@@ -190,8 +186,8 @@ export const addToMyList = async function () {
     state.showInfos.inMyList = true;
   }
   // Update Local Storage
-  // localStorage.setItem("myList", JSON.stringify(state.myList));
-  const databaseResponse = await fetch("/users/shows", {
+  // const databaseResponse = await fetch("/users/shows", {
+  await fetch("/users/shows", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -199,9 +195,7 @@ export const addToMyList = async function () {
     body: JSON.stringify({ list: state.myList, username: state.username }),
   });
 
-  const response = await databaseResponse.json();
-
-  console.log(response);
+  // const response = await databaseResponse.json();
 };
 
 const init = function () {

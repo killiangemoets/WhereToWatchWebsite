@@ -7,6 +7,7 @@ class HeaderView extends View {
   constructor() {
     super(); //Recap: only after calling super we wan use the this keyword
     this._renderMyList();
+    this._handleLogout();
   }
 
   _renderMyList() {
@@ -26,6 +27,25 @@ class HeaderView extends View {
       ) {
         myList.classList.add("hidden");
       }
+    });
+  }
+
+  _handleLogout() {
+    const logoutBtn = document.querySelector(".btn--logout");
+    const logoutIcon = logoutBtn.querySelector(".fa-solid");
+    const icon = logoutBtn.dataset.icon;
+
+    logoutBtn.addEventListener("mouseover", function () {
+      logoutIcon.setAttribute("class", "fa-solid");
+      logoutIcon.classList.add("fa-arrow-right-from-bracket");
+    });
+    logoutBtn.addEventListener("mouseleave", function () {
+      logoutIcon.setAttribute("class", "fa-solid");
+      logoutIcon.classList.add(`fa-${icon}`);
+    });
+
+    document.body.addEventListener("click", function (e) {
+      if (e.target.closest(".btn--logout")) window.location.href = "/";
     });
   }
 

@@ -101,32 +101,6 @@ main {
   color: #fff;
 }
 
-.btn--mylist {
-  padding: 0.8rem 3.2rem;
-}
-
-.spinner-div {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.spinner {
-  font-size: 8rem;
-  color: #333;
-  font-weight: 900;
-  animation: rotation 2s infinite linear;
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-
 .error {
   padding-top: 6.4rem;
   font-size: 1.8rem;
@@ -185,7 +159,7 @@ main {
   gap: 0rem;
   /* border-radius: 8px; */
   /* border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px; */
+    border-bottom-left-radius: 8px; */
 
   transition: all 0.5s;
 }
@@ -230,9 +204,36 @@ main {
   gap: 2.4rem;
 }
 
+.btn--mylist {
+  padding: 0.8rem 3.2rem;
+}
+
 /* -------------------------------------------------- */
 /*-------------------- RESULTS------------------------*/
 /* -------------------------------------------------- */
+
+.spinner-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.spinner {
+  font-size: 8rem;
+  color: #333;
+  font-weight: 900;
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 .results-section {
   margin-top: 8rem;
   min-height: calc(100vh - 8rem);

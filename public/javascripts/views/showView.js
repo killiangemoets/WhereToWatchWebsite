@@ -91,7 +91,6 @@ class ShowView extends View {
     const body = document.body;
     body.addEventListener("click", async function (e) {
       if (e.target.closest(".btn--return")) {
-        console.log("click click");
         const bodyToSend = {
           search: "friends",
           page: 1,
@@ -104,7 +103,6 @@ class ShowView extends View {
           body: JSON.stringify(bodyToSend),
         });
 
-        console.log(response);
         window.location.href = response.url;
       }
     });

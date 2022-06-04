@@ -1,0 +1,57 @@
+/***********************************************************/
+/******************** DELETE LAST CALL *********************/
+/***********************************************************/
+.main-title--delete-last-call {
+  padding: 0 2rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 6.4rem;
+}
+
+.buttons--yes-or-no {
+  display: flex;
+  gap: 6.4rem;
+  margin-bottom: 20rem;
+}
+
+.btn--yes,
+.btn--no {
+  width: 12.8rem;
+  height: 4.8rem;
+}
+.btn--no,
+.btn--no:link,
+.btn--no:visited {
+  box-shadow: inset 0 0 0 4px #00a8ff;
+  background: none;
+  color: #00a8ff;
+}
+
+.btn--no:hover,
+.btn--no:active {
+  box-shadow: inset 0 0 0 4px #0097e6;
+  background: none;
+  color: #0097e6;
+}
+
+.grid--1col {
+  padding: 6.4rem 0;
+  min-height: calc(100vh - 8rem - 2.6rem);
+  /* height: 88rem; */
+  /* background-color: #f5fcff; */
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.container-users {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

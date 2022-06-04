@@ -1,0 +1,242 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights:
+Default: 1
+Medium: 1.2
+
+- letter-spacing: 
+/
+
+-- 02 COLORS
+- Primary: #273c75
+- Tints: , #f4f6fb, #e8ecf7
+- Shades: 
+- Secondary: #00a8ff, #0097e6, #cceeff
+- Greys: #333, #444, #666, #999
+
+--04 IMAGES
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+-- 05 SHADOWS
+- 0 1.2rem 3.2rem rgba(0, 0, 0, 0.08)
+
+-- 06 BORDER-RADIUS
+8px
+12px
+16px
+
+-- 07 WHITESPACE
+    
+Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/* -------------------------------------------------- */
+/*-------------------- GENERAL------------------------*/
+/* -------------------------------------------------- */
+html {
+  /* Now 1rem = 10px */
+  /* (62.5% = 10/16 bc by default font-size=16px and we want font-size=10px) */
+  font-size: 62.5%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  color: #444;
+  background-color: #f4f6fb;
+}
+
+main {
+  margin-top: 8rem;
+  background-color: #f5fcff;
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+.container {
+  position: relative;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+
+  padding: 0.8rem 1.6rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 8px;
+
+  transition: all 0.3s;
+  background-color: #00a8ff;
+  color: #fff;
+}
+
+.btn:hover,
+.btn:visited {
+  background-color: #0097e6;
+  color: #fff;
+}
+
+.error {
+  padding-top: 6.4rem;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #666;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.header-section {
+  position: fixed;
+  top: 0;
+  /* bottom: 0; */
+  width: 100%;
+  z-index: 1;
+  /* grid-column: 1 / -1; */
+  background-color: #273c75;
+  /* border-top-left-radius: 12px; */
+  /* border-top-right-radius: 12px; */
+
+  padding: 0rem 3.2rem;
+  height: 8rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-box {
+  color: #fff;
+  font-size: 2.4rem;
+  font-style: italic;
+  font-weight: 700;
+  border-bottom: 2px solid #00a8ff;
+}
+
+.hidden {
+  /* 1) Hide it visually */
+  opacity: 0;
+  /* 2) Make it unaccessible to mouse and keybord */
+  pointer-events: none;
+  /* 3) Hide it from screen readers */
+  visibility: hidden;
+}
+
+/* -------------------------------------------------- */
+/*----------------------FOOTER------------------------*/
+/* -------------------------------------------------- */
+.footer {
+  display: flex;
+  background-color: #f5fcff;
+  padding: 0rem 4rem 1.6rem 4rem;
+}
+
+.copyright {
+  margin-top: auto;
+  color: #999;
+}
+
+.TMDB {
+  margin-top: auto;
+  margin-left: auto;
+  color: #999;
+}
+
+.red {
+  color: #dc3b3b !important;
+}
+
+.bgRed {
+  background-color: #dc3b3b !important;
+}
+
+.yellow {
+  color: #eecd29 !important;
+}
+
+.bgYellow {
+  background-color: #eecd29 !important;
+}
+
+.orange {
+  color: #d98933 !important;
+}
+
+.bgOrange {
+  background-color: #d98933 !important;
+}
+
+.pink {
+  color: #e184b4 !important;
+}
+
+.bgPink {
+  background-color: #e184b4 !important;
+}
+
+.blue {
+  color: #00a8ff !important;
+}
+
+.bgBlue {
+  background-color: #00a8ff !important;
+}
+
+.green {
+  color: #81c951 !important;
+}
+
+.bgGreen {
+  background-color: #81c951 !important;
+}
+
+.purple {
+  color: #7c4dff !important;
+}
+
+.bgPurple {
+  background-color: #7c4dff !important;
+}
+
+.white {
+  color: #fff !important;
+}
+
+.bgWhite {
+  background-color: #fff !important;
+}
+
+.black {
+  color: #222 !important;
+}
+
+.bgBlack {
+  background-color: #222 !important;
+}
