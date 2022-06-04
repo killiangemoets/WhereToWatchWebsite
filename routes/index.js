@@ -8,10 +8,14 @@ router.get("/", async function (req, res, next) {
   req.session.edit = null;
   const users = await userModel.find();
 
-  res.render("index", { users });
+  const hiddingIntro = req.session?.intro ? true : false;
+
+  res.render("index", { users, hiddingIntro });
 });
 
 router.get("/add-profile", async function (req, res, next) {
+  req.session.intro = true;
+
   res.render("addprofile");
 });
 
@@ -24,6 +28,7 @@ router.get("/delete-profile/:username", async function (req, res, next) {
 });
 
 router.get("/edit", async function (req, res, next) {
+  req.session.intro = true;
   const users = await userModel.find();
 
   res.render("editmenu", { users });
@@ -41,6 +46,8 @@ router.get("/edit-profile/:username", async function (req, res, next) {
 
 router.get("/search", async function (req, res, next) {
   if (!req.session?.user || req.session.user === null) return res.redirect("/");
+
+  req.session.intro = true;
 
   const user = await userModel.findOne({ username: req.session.user });
 
