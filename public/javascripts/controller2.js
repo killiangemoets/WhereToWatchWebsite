@@ -2,7 +2,6 @@ import * as model from "./model.js";
 import showView from "./views/showView.js";
 import headerView from "./views/headerView.js";
 import resultsView from "./views/resultsView.js";
-import paginationView from "./views/paginationView.js";
 import myListView from "./views/myListView.js";
 
 const controlShow = async function () {
@@ -30,43 +29,6 @@ const controlShow = async function () {
   } catch (err) {
     console.error(err);
     showView.renderError();
-  }
-};
-
-const controlResults = async function () {
-  try {
-    // 1) Get the input value
-    const input = headerView.getInput();
-
-    // 2) Load results
-    resultsView.renderSpinner();
-    await model.loadResults(input);
-
-    // 3) Get first page of results and render it
-    resultsView.renderShowsList(await model.getResultsPage());
-
-    // 4) Add pagination
-    paginationView.renderPagination(
-      model.state.currentPage,
-      model.state.totalResults
-    );
-  } catch (err) {
-    console.error(err);
-  }
-};
-
-const controlPage = async function (newPage) {
-  try {
-    // 1) Render new page and update current page number
-    resultsView.renderShowsList(await model.getResultsPage(newPage));
-
-    // 2) Update pagination
-    paginationView.renderPagination(
-      model.state.currentPage,
-      model.state.totalResults
-    );
-  } catch (err) {
-    throw err;
   }
 };
 
@@ -99,30 +61,7 @@ const controlAddToMyList = function () {
 
 const init = function () {
   showView.addHandlerRenderShow(controlShow);
-  //   headerView.addHandlerSearch(controlResults);
-  //   paginationView.addHandlerChangePage(controlPage);
   showView.addHandlerChangeCountry(controlWhereToWatch);
   showView.addHandlerAddToMyList(controlAddToMyList);
 };
 init();
-
-const logoutBtn = document.querySelector(".btn--logout");
-const logoutIcon = logoutBtn.querySelector(".fa-solid");
-const icon = logoutBtn.dataset.icon;
-
-logoutBtn.addEventListener("mouseover", function () {
-  // logoutBtn.innerHTML = '<i class="fa-solid fa-arrow-right-from-bracket"></i>';
-  logoutIcon.setAttribute("class", "fa-solid");
-  logoutIcon.classList.add("fa-arrow-right-from-bracket");
-});
-logoutBtn.addEventListener("mouseleave", function () {
-  // logoutBtn.innerHTML = `<i class="fa-solid fa-${logoutBtn.dataset.icon}"></i>`;
-  logoutIcon.setAttribute("class", "fa-solid");
-  logoutIcon.classList.add(`fa-${icon}`);
-});
-
-document.body.addEventListener("click", function (e) {
-  console.log(e.target);
-  console.log(e.target.closest(".btn--logout"));
-  if (e.target.closest(".btn--logout")) window.location.href = "/";
-});

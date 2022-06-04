@@ -11,7 +11,6 @@ addBtn.addEventListener("click", function () {
 const hiddingIntro = document.querySelector(".container").dataset.intro;
 const titleElem = document.querySelector(".intro-title");
 
-console.log(hiddingIntro);
 if (hiddingIntro === "true") {
   document.querySelector(".intro").classList.add("hidden");
 } else {

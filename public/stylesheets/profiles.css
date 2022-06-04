@@ -1,0 +1,126 @@
+/***********************************************************/
+/**************** PROFILES SECTION *************************/
+/***********************************************************/
+.grid--1col {
+  padding: 6.4rem 0;
+  min-height: calc(100vh - 8rem - 2.6rem);
+  /* height: 88rem; */
+  /* background-color: #f5fcff; */
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.container-users {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro {
+  position: absolute;
+  z-index: 999 !important;
+  top: 0%;
+  left: 0%;
+  background-color: #273c75;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* transition: all 1s; */
+}
+
+.intro-title {
+  color: #fff;
+  font-size: 4.8rem;
+  font-style: italic;
+  font-weight: 700;
+  border-bottom: 4px solid #00a8ff;
+  text-align: center;
+  transition: all 0.5s;
+  /* opacity: 1; */
+}
+
+/*----------------------MAIN TITLE------------------------*/
+
+.main-title--select-profile {
+  font-size: 4.8rem;
+  font-weight: 700;
+  color: #444;
+  margin-bottom: 6.4rem;
+}
+
+/*------------------------USERS---------------------------*/
+.users-section {
+  display: flex;
+  gap: 5.2rem;
+  justify-content: center;
+  justify-items: center;
+  margin-bottom: 25.6rem;
+}
+
+.btn--user,
+.btn--user:link,
+.btn--user:visited {
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  width: 14rem;
+}
+
+.user-picture {
+  font-size: 8rem;
+  padding: 2.4rem 0rem;
+  border-radius: 32px;
+  background-color: #00a8ff;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.08);
+  color: #fff;
+  margin-bottom: 1.6rem;
+  transition: all 0.3s;
+}
+
+.user-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #888;
+  text-align: center;
+}
+
+.btn--user:hover .user-picture,
+.btn--user:active .user-picture {
+  box-shadow: inset 0 0 0 4px #444;
+}
+
+.btn--user:hover .user-name,
+.btn--user:active .user-name {
+  color: #444;
+}
+
+/*-----------------------BUTTONS-------------------------*/
+
+.buttons-section {
+  display: flex;
+  gap: 6.4rem;
+  justify-content: center;
+}
+
+.btn--edit,
+.btn--add {
+  padding: 1.4rem 2rem;
+  font-size: 1.8rem;
+}
+
+.max-accounts {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  color: red;
+  font-weight: 500;
+  width: 32rem;
+  text-align: center;
+}

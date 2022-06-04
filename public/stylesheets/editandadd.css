@@ -1,0 +1,167 @@
+/***********************************************************/
+/**************** EDIT OR ADD A PROFILE ********************/
+/***********************************************************/
+
+.main-title--edit-section {
+  font-size: 3.6rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 6.4rem;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6.4rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 6.4rem;
+}
+
+.edit-user-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+  width: 50rem;
+}
+
+.edit-user-form label {
+  display: inline-block;
+  width: 180px;
+  text-align: left;
+  font-size: 1.68em;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+.edit-user-form input,
+.edit-user-form select {
+  width: 60%;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  color: #444;
+  border: none;
+  background-color: #e8ecf7;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.edit-user-form input::placeholder {
+  color: #aaa;
+}
+
+.edit-user-form *:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px #00a8ff;
+}
+
+.profile-error-message {
+  margin-top: 1rem;
+  height: 1.4rem;
+  margin-bottom: 0rem !important;
+  /* text-align: end; */
+  margin-left: 18.6rem;
+}
+
+.btn--user-overview:hover .user-picture,
+.btn--user-overview:active .user-picture {
+  box-shadow: none;
+}
+
+.btn--user-overview:hover .user-name,
+.btn--user-overview:active .user-name {
+  color: #888;
+}
+
+.buttons-edit-profile-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-form--submit {
+  padding: 0.8rem 8.8rem;
+}
+
+.btn-form--cancel,
+.btn-form--delete,
+.btn-form--cancel:link,
+.btn-form--delete:link,
+.btn-form--cancel:visited,
+.btn-form--delete:visited {
+  box-shadow: inset 0 0 0 4px #00a8ff;
+  background: none;
+  color: #00a8ff;
+}
+
+.btn-form--cancel:hover,
+.btn-form--delete:hover,
+.btn-form--cancel:active,
+.btn-form--delete:active {
+  box-shadow: inset 0 0 0 4px #0097e6;
+  background: none;
+  color: #0097e6;
+}
+
+.profile-error-message {
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+  color: red;
+  font-weight: 500;
+}
+
+.users-section {
+  display: flex;
+  gap: 5.2rem;
+  justify-content: center;
+  justify-items: center;
+  margin-bottom: 25.6rem;
+}
+
+.btn--user,
+.btn--user:link,
+.btn--user:visited {
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  width: 14rem;
+}
+
+.user-picture {
+  font-size: 8rem;
+  padding: 2.4rem 0rem;
+  border-radius: 32px;
+  background-color: #00a8ff;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.08);
+  color: #fff;
+  margin-bottom: 1.6rem;
+  transition: all 0.3s;
+}
+
+.user-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #888;
+  text-align: center;
+}
+
+.grid--1col {
+  padding: 6.4rem 0;
+  min-height: calc(100vh - 8rem - 2.6rem);
+  /* height: 88rem; */
+  /* background-color: #f5fcff; */
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.container-users {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

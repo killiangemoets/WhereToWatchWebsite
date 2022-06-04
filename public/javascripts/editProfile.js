@@ -13,7 +13,6 @@ const errorMessage = document.querySelector(".profile-error-message");
 iconInput.value = iconInput.dataset.icon;
 colorInput.value = colorInput.dataset.color;
 
-console.log(backgroundColorInput.dataset.background);
 backgroundColorInput.value = backgroundColorInput.dataset.background;
 
 backgroundColorInput.addEventListener("change", function () {
@@ -38,7 +37,6 @@ usernameInput.addEventListener("change", function () {
 
 confirmBtn.addEventListener("click", async function (e) {
   e.preventDefault();
-  //   console.log("click");
 
   const updateContent = {
     user: usernameInput.dataset.username,
@@ -64,8 +62,6 @@ confirmBtn.addEventListener("click", async function (e) {
   });
 
   const response = await databaseResponse.json();
-
-  console.log(response);
 
   if (response.status === "success") {
     // REDIRECT
